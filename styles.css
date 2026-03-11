@@ -1,0 +1,155 @@
+/* Configuració global */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #fcfcfc;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    box-shadow: inset 0 -5px 15px rgba(0,0,0,0.1);
+}
+
+/* Multimèdia Cards */
+.multimedia-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
+}
+.multimedia-card:hover {
+    transform: translateY(-5px);
+}
+
+/* =========================================
+   DISSENY AVANÇAT DEL FORMULARI (Nivell 4)
+   ========================================= */
+.contact-wrapper {
+    background: #ffffff;
+    padding: 3rem 4rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Agrupació i posicionament per les etiquetes flotants */
+.custom-input-group {
+    position: relative;
+    margin-top: 10px;
+}
+
+.custom-input {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1rem;
+    color: #2d3748;
+    background-color: #f8fafc;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Estat Focus dels inputs */
+.custom-input:focus {
+    background-color: #ffffff;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+/* Etiquetes base (simulen el placeholder) */
+.custom-label {
+    position: absolute;
+    left: 1.2rem;
+    top: 1.2rem;
+    color: #a0aec0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    pointer-events: none; /* Per evitar que bloquegin el clic al input */
+}
+
+/* Màgia de l'etiqueta flotant quan hi ha focus o text escrit */
+.custom-input:focus ~ .custom-label,
+.custom-input:not(:placeholder-shown) ~ .custom-label {
+    top: -0.6rem;
+    left: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #667eea;
+    background-color: #ffffff;
+    padding: 0 0.4rem;
+    border-radius: 4px;
+}
+
+/* Botó de Submit interactiu */
+.btn-submit {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-submit:active {
+    transform: translateY(1px);
+}
+
+.btn-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Footer */
+footer {
+    background-color: #1a202c;
+    padding: 3rem 0;
+}
+.social-icons a {
+    color: #a0aec0;
+    font-size: 24px;
+    margin: 0 12px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+.social-icons a:hover {
+    color: #667eea;
+    transform: translateY(-3px);
+}
+
+/* Ajustaments per a dispositius mòbils */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        padding: 2rem;
+    }
+    .carousel-item img {
+        height: 250px;
+        object-fit: cover;
+    }
+}
